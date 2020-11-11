@@ -16,13 +16,12 @@ const users = [
 //Crie uma função que recebe os dados de um objeto de usuário e retorna SE o usuário trabalha com CSS ou não. 
 //Essa função deve retornar um boolean true/false.
 
-function checkIfUserUsesCSS(user) {
-    const technologies = user.technologies
-    for (let i = 0; i < technologies.length; i++) {
-        if (technologies[i] == 'CSS') {
-            return true 
-        } 
-    } 
+function checkIfUserUsesCSS (user) {
+    for (const tech of user.technologies) {
+        if (tech == 'CSS') {
+            return true
+        }
+    }
     return false
 }
 
@@ -35,4 +34,4 @@ for (let i = 0; i < users.length; i++) {
     if (useCSS) {
       console.log(`O usuário ${users[i].name} trabalha com CSS`);
     }
-  }
+  } 

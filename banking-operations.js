@@ -16,7 +16,6 @@ function createTransaction(transaction) {
 
 createTransaction({type: 'credit', value: 50})
 createTransaction({type: 'credit', value: 120})
-createTransaction({type: 'credit', value: 140})
 createTransaction({type: 'debit', value: 80})
 createTransaction({type: 'debit', value: 30})
 
@@ -42,19 +41,22 @@ console.table(user.transactions)
     } 
     return higherTransaction
 }
- 
+
 getHigherTransactionByType('credit')
 getHigherTransactionByType('debit')*/
 
 //PARTE 2
 
-function getAverageTransactionValue(average) {
+function getAverageTransactionValue() {
       
-      let averageTransactions = user.balance / user.transactions.length 
+    let sumOfTransactions = 0
 
-      average = averageTransactions
-      
-      console.log(`O valor médio das transações de ${user.name} é de R$ ${average}.`)     
+    for(let transaction of user.transactions) {
+        sumOfTransactions += transaction.value
+    } 
+    return sumOfTransactions / user.transactions.length            
 }
-
 getAverageTransactionValue()
+
+//console.log(`O valor médio das transações de ${user.name} é de R$ ${getAverageTransactionValue()}.`)
+

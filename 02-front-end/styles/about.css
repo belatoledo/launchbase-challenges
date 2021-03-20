@@ -1,0 +1,92 @@
+:root {
+  --color-purple: #6c4fbb; 
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  background: #19191a;
+  font-family: 'Roboto', sans-serif;
+}
+
+#logo {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#logo img {
+  border-radius: 50%;
+  border: 3px solid white;
+  height: 140px;
+
+}
+
+#logo h1 {
+  color: white;
+  margin: 30px;
+  font-size: 36px;
+  line-height: 46px;
+  text-decoration: underline 7px var(--color-purple);
+}
+
+#logo h2 {
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  max-width: 700px;
+  margin: 20px auto 130px;
+  opacity: 0.8;
+}
+
+#techs {
+  text-align: center;
+  font-size: 24px;
+  color: var(--color-purple);
+}
+
+#techs ul {
+  padding: 30px;
+  background: #121212;
+}
+
+#techs ul li {
+  display: inline;
+  float: center;
+  margin: 50px 30px;
+  font-weight: bold;
+  opacity: 0.8;
+  color: white;
+}
+
+#links {
+  position: relative;
+  top: 200px;
+  text-align: center;
+  margin: 10px; 
+}
+
+#links h3 {
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+#links a {
+  color: var(--color-purple);
+  padding: 10px;
+  text-decoration: none;
+}
+
+#links a:hover {
+  background: var(--color-purple);
+  color: white;
+  font-weight: 600;
+}
+

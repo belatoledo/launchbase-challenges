@@ -1,0 +1,46 @@
+:root {
+  --color-purple: #6c4fbb;
+  --color-light-purple: #a492d3;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  background: #19191a;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 150px 10px
+}
+.header-container {
+  padding: 30px;
+  background: #000;
+  color: var(--color-purple);
+  grid-row: 1;
+  grid-column: 1/4;
+  text-align: center;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 150px;
+  max-width: 33vw;
+  height: 30vh;
+  
+  text-align: center;
+  color: white;
+  background: var(--color-light-purple);
+  border: solid 3px var(--color-purple);
+  border-radius: 10px;
+
+  
+}

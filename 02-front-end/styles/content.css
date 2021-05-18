@@ -1,12 +1,16 @@
 :root {
   --color-purple: #6c4fbb;
+  --color-dark-purple: #4c25b8e5;
   --color-light-purple: #a492d3;
+  --color-transparent-purple: #c1b2e9f1;
 }
 
 * {
   margin: 0;
   border: 0;
   padding: 0;
+
+  font-size: 62.5%;
 }
 
 body {
@@ -14,33 +18,99 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-#container {
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr auto;
-  gap: 150px 10px
-}
 .header-container {
-  padding: 30px;
-  background: #000;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.445);
+  border-bottom: 1px solid var(--color-purple);
   color: var(--color-purple);
-  grid-row: 1;
-  grid-column: 1/4;
   text-align: center;
 }
 
-.card {
-  margin: 0 auto;
-  padding: 150px;
-  max-width: 33vw;
-  height: 30vh;
-  
-  text-align: center;
-  color: white;
-  background: var(--color-light-purple);
-  border: solid 3px var(--color-purple);
-  border-radius: 10px;
+.header-container h3 {
+font-size: 18px;
+line-height: 30px;
+color: white;
+text-decoration: none;
+}
 
-  
+img {
+  border-radius: .8rem;
+}
+
+span {
+  display: inline-block;
+  height: 9px;
+}
+.text-card__title {
+  padding-bottom: 3rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.text-card__autor {
+  padding-top: 2rem;
+  color: var(--color-dark-purple);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.text-card__read-time {
+  padding-top: .7rem;
+  color: #19191a;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.all-cards {
+  margin-top: 2rem;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template: repeat(3, 300px); 
+  gap: 3rem;
+}
+
+.c-card {
+  background-color: var(--color-transparent-purple);
+  border: 3px solid var(--color-purple);
+  border-radius: .6rem;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 300px;
+}
+
+.c-card__image {
+  background-color: var(--color-light-purple);
+  border-top-left-radius: .6rem;
+  border-top-right-radius: .6rem;
+  display: flex;
+  flex: 5;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.c-card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+@media (min-width: 1024px) {
+  .all-cards {
+    margin-top: 10rem;
+    justify-content: center;
+    align-items: center;
+    grid-template: 450px / auto auto auto ;
+    gap: 10rem;
+  }
+
+  .c-card {
+    height: 300px;
+    width: auto;
+  }
 }

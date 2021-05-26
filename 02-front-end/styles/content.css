@@ -108,6 +108,13 @@ span {
   width: 100%;
   height: 100%;
   top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal {
@@ -115,7 +122,18 @@ span {
   width: 90%;
   height: 90%;
   margin: 5vh auto;
+  position: relative;
 }
+
+.modal .close-modal {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: var(--color-purple);
+  cursor: pointer;
+}
+
+
 
 
 

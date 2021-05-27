@@ -119,16 +119,30 @@ span {
 
 .modal {
   background-color: var(--color-light-purple);
+  width: 45%;
+  height: 60%;
+  margin: 15vh auto;
+  position: relative;
+}
+
+.modal.maximize {
   width: 90%;
   height: 90%;
   margin: 5vh auto;
-  position: relative;
 }
 
 .modal .close-modal {
   position: absolute;
   right: 8px;
   top: 8px;
+  color: var(--color-purple);
+  cursor: pointer;
+}
+
+.modal .maximize-modal {
+  position: absolute;
+  right: 35px;
+  top: 16px;
   color: var(--color-purple);
   cursor: pointer;
 }

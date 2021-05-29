@@ -1,4 +1,5 @@
 const modalOverlay = document.querySelector('.modal-overlay')
+const modal = document.querySelector('.modal')
 const cards = document.querySelectorAll('.c-card')
 
 for (let card of cards) {
@@ -11,13 +12,12 @@ document.querySelector('.close-modal').addEventListener("click", function() {
   modalOverlay.classList.remove('active')
 })
 
-const maximizeModal = document.querySelector('.modal')
-  
-  if(maximizeModal.classList.contains('maximize' === false)) {
-    document.querySelector('.maximize-modal').addEventListener("click", function() {
-      maximizeModal.classList.add('maximize')
-    })
-  }
-
-
-
+if (modal.classList.contains('max-modal') != true) {
+  document.querySelector('.maximize-button').addEventListener("click", function() {
+    modal.classList.toggle('max-modal')
+  })
+ } /*else {
+  document.querySelector('.maximize-button').addEventListener("click", function() {
+    modal.classList.remove('max-modal')
+  })
+}*/

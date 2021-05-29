@@ -125,7 +125,7 @@ span {
   position: relative;
 }
 
-.modal.maximize {
+.modal.max-modal {
   width: 90%;
   height: 90%;
   margin: 5vh auto;
@@ -139,7 +139,7 @@ span {
   cursor: pointer;
 }
 
-.modal .maximize-modal {
+.modal .maximize-button {
   position: absolute;
   right: 35px;
   top: 16px;

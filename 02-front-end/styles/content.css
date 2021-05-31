@@ -81,6 +81,7 @@ span {
   flex-direction: column;
   height: 350px;
   width: 300px;
+  padding: 3rem 0;
 }
 
 .c-card__image {
@@ -92,6 +93,7 @@ span {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 3rem 1rem;
 }
 
 .c-card__content {
@@ -99,7 +101,11 @@ span {
   flex-direction: column;
   flex: 1;
   justify-content: space-around;
-  padding: 15px;
+  padding: 1.5rem 2rem;
+}
+
+.text-card__title {
+  margin-bottom: 30px;
 }
 
 .modal-overlay {
@@ -147,23 +153,28 @@ span {
   cursor: pointer;
 }
 
+iframe {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  margin: 4rem auto;
 
+}
 
-
-
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .all-cards {
-    margin-top: 10rem;
+    margin: 17rem 10rem 0 10rem;
     justify-content: center;
     align-items: center;
     grid-template: 450px / auto auto auto ;
-    gap: 10rem;
+    gap: 5rem;
   }
 
   .c-card {
-    bottom: 20px;
-    height: max-content;
     width: auto;
+    height: max-content;
+    padding: 3rem 0  1rem 0;
+    bottom: 20px;
   }
 
   .c-card__image {
@@ -177,4 +188,21 @@ span {
     justify-content: center;
     overflow: hidden; 
   }
+  .c-card__content span {
+    padding-bottom: 20px;
+  }
+  .text-card__title {
+    font-size: 22px;
+  }
+
+  .text-card__autor {
+    margin-top: 25px;
+    font-size: 18px;
+  }
+
+  .text-card__read-time {
+    font-size: 15px;
+  }
+
+
 }
